@@ -110,7 +110,7 @@ namespace QuanLyBanHang
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(223, 34);
             this.txtMatkhau.TabIndex = 6;
-            this.txtMatkhau.Text = "123";
+            this.txtMatkhau.Text = "tnzj7614TN";
             // 
             // lblQuenmatkhau
             // 
