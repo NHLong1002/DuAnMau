@@ -13,6 +13,7 @@ namespace QuanLyBanHang
 {
     public partial class FMain : Form
     {
+        // hello git hub
         public FMain()
         {
             InitializeComponent();
