@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\bin\Debug\DAL_QLBanHang.dll
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\bin\Debug\DAL_QLBanHang.pdb
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\bin\Debug\DTO_QLBanHang.dll
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\bin\Debug\DTO_QLBanHang.pdb
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.csproj.CopyComplete
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.dll
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DAL_QLBanHang\obj\Debug\DAL_QLBanHang.pdb

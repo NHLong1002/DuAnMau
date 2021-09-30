@@ -1,0 +1,6 @@
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\bin\Debug\DTO_QLBanHang.dll
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\bin\Debug\DTO_QLBanHang.pdb
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.dll
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\DTO_QLBanHang\obj\Debug\DTO_QLBanHang.pdb

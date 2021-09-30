@@ -1,0 +1,16 @@
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe.config
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.exe
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\bin\Debug\QuanLyBanHang.pdb
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\BUS_QuanLyBanHang.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FDoiMatKhau.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FLogin.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FMain.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FQuanLyKhachHang.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FQuanlyNV.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.Properties.Resources.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FQuanLyHangHoa.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.FThongKeSanPham.resources
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\BUS_QuanLyBanHang.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\BUS_QuanLyBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.exe
+C:\Users\Admin\Desktop\Sắp xếp môn học\học kì 4\Du an Mau\Bài làm dự án mẫu\QuanLyBanHang\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
