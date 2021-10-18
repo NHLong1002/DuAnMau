@@ -6,10 +6,13 @@ using System.Net.Mail;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace QuanLyBanHang
 {
     public partial class FLogin : Form
     {
+        public bool vaitro;
+        public string matkhau;
         // tạo một đối tượng bus nhân viên để sử dụng các thành phần bên trong nó
         BUS_NhanVien busnhanvien = new BUS_NhanVien();
 
@@ -17,8 +20,17 @@ namespace QuanLyBanHang
         {
             InitializeComponent();
         }
-        // Events
-        #region
+
+        #region Events
+
+        // Event Đăng nhập
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             DTO_NhanVien nhanvien = new DTO_NhanVien();
@@ -30,7 +42,11 @@ namespace QuanLyBanHang
             {
                 // thành công
                 MessageBox.Show("Đăng nhập thành công");
+                FMain.email = nhanvien.Email;
+                vaitro = busnhanvien.VaiTro(nhanvien.Email);
+                FMain.session = 1;
                 this.Close();
+                
             }
             else
             {
@@ -42,6 +58,7 @@ namespace QuanLyBanHang
                 MessageBox.Show(nhanvien.MatKhau);
             }
         }
+        // Event Quên mật khẩu
         private void lblQuenmatkhau_Click(object sender, EventArgs e)
         {
             if (txtTenDangNhap.Text == "")
@@ -60,14 +77,14 @@ namespace QuanLyBanHang
                     string matkhaumoi = busnhanvien.encryption(builder.ToString());
                     // cập nhật lại mật khẩu mới trên CSDL
                     busnhanvien.MatKhauMoi(txtTenDangNhap.Text, matkhaumoi);
-                    GuiMail(txtTenDangNhap.Text, builder.ToString());
+                    GuiMail(txtTenDangNhap.Text,"Mật khẩu mới của bạn (QMK)",builder.ToString());
                 }
             }
         }
         #endregion
 
-        // Code xử lý
-        #region
+   
+        #region Code xử lý
         // Tạo chuỗi ngẫu nhiên
         public string RandomString(int size, bool Lowercases)
         {
@@ -92,7 +109,7 @@ namespace QuanLyBanHang
             return rd.Next(min, max).ToString();
         }
         // Tự động gởi mail
-        public void GuiMail(string email, string matkhau)
+        public void GuiMail(string email,string tieude ,string matkhau)
         {
             try
             {
@@ -119,7 +136,8 @@ namespace QuanLyBanHang
                 //client.Send(msg);
                 //// Xác nhận gửi sau khi nhấn nút
                 //MessageBox.Show("Mật khẩu mới của bạn đã được gửi tới, Vui lòng check mail");
-                MailMessage mess = new MailMessage("ngiuenhoanglong100220@gmail.com", "ngiuenhoanglong100220@gmail.com", "Gửi vui thôi", matkhau);
+                MailMessage mess = new MailMessage("ngiuenhoanglong100220@gmail.com", "ngiuenhoanglong100220@gmail.com", tieude, matkhau);
+                
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.EnableSsl = true;
                 client.Credentials = new NetworkCredential("ngiuenhoanglong100220@gmail.com", "0936229300");
@@ -132,7 +150,9 @@ namespace QuanLyBanHang
                 MessageBox.Show(ex.Message);
             }
         }
+
         #endregion
 
+        
     }
 }

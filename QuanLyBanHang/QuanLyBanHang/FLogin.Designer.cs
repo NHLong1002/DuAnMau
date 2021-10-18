@@ -110,7 +110,7 @@ namespace QuanLyBanHang
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(223, 34);
             this.txtMatkhau.TabIndex = 6;
-            this.txtMatkhau.Text = "tnzj7614TN";
+            this.txtMatkhau.Text = "123";
             // 
             // lblQuenmatkhau
             // 
@@ -134,6 +134,7 @@ namespace QuanLyBanHang
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangnhap
             // 
@@ -187,6 +188,8 @@ namespace QuanLyBanHang
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Name = "FLogin";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();

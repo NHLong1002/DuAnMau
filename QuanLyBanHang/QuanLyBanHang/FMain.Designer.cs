@@ -46,6 +46,7 @@ namespace QuanLyBanHang
             this.hướngDẫnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ITEMMNSHDSD = new System.Windows.Forms.ToolStripMenuItem();
             this.ITEMMNSGTSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.Thongtinnv = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,10 +59,11 @@ namespace QuanLyBanHang
             this.hệThốngToolStripMenuItem,
             this.danhMụcToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
-            this.hướngDẫnToolStripMenuItem});
+            this.hướngDẫnToolStripMenuItem,
+            this.Thongtinnv});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1082, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "mnsQLBH";
             // 
@@ -109,6 +111,7 @@ namespace QuanLyBanHang
             this.ITEMMNSHSNV.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.ITEMMNSHSNV.Size = new System.Drawing.Size(305, 30);
             this.ITEMMNSHSNV.Text = "Hồ sơ nhân viên";
+            this.ITEMMNSHSNV.Click += new System.EventHandler(this.ITEMMNSHSNV_Click);
             // 
             // ITEMMNSTHOAT
             // 
@@ -118,6 +121,7 @@ namespace QuanLyBanHang
             this.ITEMMNSTHOAT.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.ITEMMNSTHOAT.Size = new System.Drawing.Size(305, 30);
             this.ITEMMNSTHOAT.Text = "Thoát";
+            this.ITEMMNSTHOAT.Click += new System.EventHandler(this.ITEMMNSTHOAT_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -137,6 +141,7 @@ namespace QuanLyBanHang
             this.ITEMMNSSANPHAM.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.ITEMMNSSANPHAM.Size = new System.Drawing.Size(267, 30);
             this.ITEMMNSSANPHAM.Text = "Sản phẩm";
+            this.ITEMMNSSANPHAM.Click += new System.EventHandler(this.ITEMMNSSANPHAM_Click);
             // 
             // ITEMMNSNHANVIEN
             // 
@@ -146,6 +151,8 @@ namespace QuanLyBanHang
             this.ITEMMNSNHANVIEN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.N)));
             this.ITEMMNSNHANVIEN.Size = new System.Drawing.Size(267, 30);
             this.ITEMMNSNHANVIEN.Text = "Nhân viên";
+            this.ITEMMNSNHANVIEN.Visible = false;
+            this.ITEMMNSNHANVIEN.Click += new System.EventHandler(this.ITEMMNSNHANVIEN_Click);
             // 
             // ITEMMNSKHACHHANG
             // 
@@ -155,6 +162,7 @@ namespace QuanLyBanHang
             this.ITEMMNSKHACHHANG.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
             this.ITEMMNSKHACHHANG.Size = new System.Drawing.Size(267, 30);
             this.ITEMMNSKHACHHANG.Text = "Khách hàng";
+            this.ITEMMNSKHACHHANG.Click += new System.EventHandler(this.ITEMMNSKHACHHANG_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -163,6 +171,7 @@ namespace QuanLyBanHang
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Visible = false;
             // 
             // ITEMMNSTHONGKESP
             // 
@@ -172,6 +181,7 @@ namespace QuanLyBanHang
             this.ITEMMNSTHONGKESP.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.ITEMMNSTHONGKESP.Size = new System.Drawing.Size(325, 30);
             this.ITEMMNSTHONGKESP.Text = "Thống kê sản phẩm";
+            this.ITEMMNSTHONGKESP.Click += new System.EventHandler(this.ITEMMNSTHONGKESP_Click);
             // 
             // hướngDẫnToolStripMenuItem
             // 
@@ -189,6 +199,7 @@ namespace QuanLyBanHang
             this.ITEMMNSHDSD.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
             this.ITEMMNSHDSD.Size = new System.Drawing.Size(395, 36);
             this.ITEMMNSHDSD.Text = "Hướng dẫn sử dụng";
+            this.ITEMMNSHDSD.Click += new System.EventHandler(this.ITEMMNSHDSD_Click);
             // 
             // ITEMMNSGTSP
             // 
@@ -196,6 +207,12 @@ namespace QuanLyBanHang
             this.ITEMMNSGTSP.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
             this.ITEMMNSGTSP.Size = new System.Drawing.Size(395, 36);
             this.ITEMMNSGTSP.Text = "Giới thiệu sản phẩm";
+            // 
+            // Thongtinnv
+            // 
+            this.Thongtinnv.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Thongtinnv.Name = "Thongtinnv";
+            this.Thongtinnv.Size = new System.Drawing.Size(14, 36);
             // 
             // contextMenuStrip1
             // 
@@ -205,16 +222,19 @@ namespace QuanLyBanHang
             // 
             // FMain
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = global::QuanLyBanHang.Properties.Resources.logo;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(982, 483);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(1082, 653);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.FMain_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -243,6 +263,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ITEMMNSHDSD;
         private System.Windows.Forms.ToolStripMenuItem ITEMMNSGTSP;
+        private System.Windows.Forms.ToolStripMenuItem Thongtinnv;
     }
 }
 

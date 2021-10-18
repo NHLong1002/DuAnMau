@@ -6,12 +6,39 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO_QLBanHang;
 using DAL_QLBanHang;
+using System.Data;
+
 namespace BUS_QLBanHang
 {
     public class BUS_NhanVien
     {
         // Tạo các đối tượng của lớp khác để truy xuất
         DAL_NhanVien dalnhanvien = new DAL_NhanVien();
+        // Tìm kiếm nhân viên theo tên
+        public DataTable TimNV (string name)
+        {
+            return dalnhanvien.TimNV(name);
+        }
+        // Xóa nhân viên
+        public bool XoaNV(string email)
+        {
+            return dalnhanvien.XoaNV(email);
+        }
+        // Cập nhật nhân viên
+        public bool CapNhatNV(DTO_NhanVien nv)
+        {
+            return dalnhanvien.CapNhatNV(nv);
+        }
+        // Nhập nhân viên
+        public bool NhapNV(DTO_NhanVien nv)
+        {
+            return dalnhanvien.NhapNV(nv);
+        }
+        // Xuất danh sách nhân viên
+        public DataTable DanhSachNV()
+        {
+            return dalnhanvien.DanhSachNV();
+        }
         // mã hóa mật khẩu
         public string encryption(string password)
         {
@@ -28,6 +55,16 @@ namespace BUS_QLBanHang
             }
             return encryptData.ToString();
         }
+        // Đổi mật khẩu
+        public bool DoiMatKhau (string email, string mkcu , string mkmoi)
+        {
+            return dalnhanvien.DoiMatKhau(email, mkcu, mkmoi);
+        }
+        // Vai trò
+        public bool VaiTro(string email)
+        {
+            return dalnhanvien.VaiTro(email);
+        }
         // Đăng nhập
         public bool DangNhap(DTO_NhanVien nv)
         {
@@ -43,5 +80,11 @@ namespace BUS_QLBanHang
         {
             return dalnhanvien.TaoMatKhauMoi(email, matkhaumoi);
         }
+        // check email 
+        public bool CheckEmailExist (string email)
+        {
+            return dalnhanvien.CheckEmail(email);
+        }
+
     }
 }

@@ -15,14 +15,16 @@ namespace DTO_QLBanHang
         private bool tinhTrang;
         private bool vaiTro;
         private string matKhau;
+        private string diaChi;
 
         // tạo constructer
-        public DTO_NhanVien(int id, string manv , string hoten , string email , bool tinhtrang, bool vaitro , string matkhau)
+        public DTO_NhanVien(int id, string manv , string hoten , string email,string diachi , bool tinhtrang, bool vaitro , string matkhau)
         {
             this.ID = id;
             this.MaNV = manv;
             this.HoTen = hoten;
             this.Email = email;
+            this.DiaChi = diachi;
             this.TinhTrang = tinhtrang;
             this.VaiTro = vaitro;
             this.MatKhau = matkhau;
@@ -39,5 +41,6 @@ namespace DTO_QLBanHang
         public bool TinhTrang { get => tinhTrang; set => tinhTrang = value; }
         public bool VaiTro { get => vaiTro; set => vaiTro = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
     }
 }

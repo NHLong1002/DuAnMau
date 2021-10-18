@@ -35,7 +35,7 @@ namespace QuanLyBanHang
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.txtGhichu = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtTenhang = new System.Windows.Forms.TextBox();
             this.txtMahang = new System.Windows.Forms.TextBox();
@@ -54,6 +54,7 @@ namespace QuanLyBanHang
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThemHinh = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,7 @@ namespace QuanLyBanHang
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(975, 234);
             this.dataGridView1.TabIndex = 63;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnLuu
             // 
@@ -78,6 +80,7 @@ namespace QuanLyBanHang
             this.btnLuu.TabIndex = 62;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -89,6 +92,7 @@ namespace QuanLyBanHang
             this.btnSua.TabIndex = 61;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -100,6 +104,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 60;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
@@ -111,6 +116,7 @@ namespace QuanLyBanHang
             this.btnThoat.TabIndex = 59;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtTim
             // 
@@ -120,14 +126,14 @@ namespace QuanLyBanHang
             this.txtTim.Size = new System.Drawing.Size(268, 34);
             this.txtTim.TabIndex = 58;
             // 
-            // txtDiachi
+            // txtGhichu
             // 
-            this.txtDiachi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiachi.Location = new System.Drawing.Point(503, 103);
-            this.txtDiachi.Multiline = true;
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(259, 63);
-            this.txtDiachi.TabIndex = 53;
+            this.txtGhichu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhichu.Location = new System.Drawing.Point(503, 103);
+            this.txtGhichu.Multiline = true;
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.Size = new System.Drawing.Size(259, 63);
+            this.txtGhichu.TabIndex = 53;
             // 
             // btnThem
             // 
@@ -140,6 +146,7 @@ namespace QuanLyBanHang
             this.btnThem.TabIndex = 48;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTenhang
             // 
@@ -168,6 +175,7 @@ namespace QuanLyBanHang
             this.btnTim.TabIndex = 45;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label1
             // 
@@ -205,9 +213,9 @@ namespace QuanLyBanHang
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(413, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 32);
+            this.label4.Size = new System.Drawing.Size(102, 32);
             this.label4.TabIndex = 54;
-            this.label4.Text = "Địa chỉ: ";
+            this.label4.Text = "Ghi chú:";
             // 
             // txtDongianhap
             // 
@@ -303,12 +311,28 @@ namespace QuanLyBanHang
             this.btnThemHinh.Text = "Thêm ảnh";
             this.btnThemHinh.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThemHinh.UseVisualStyleBackColor = true;
+            this.btnThemHinh.Click += new System.EventHandler(this.btnThemHinh_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::QuanLyBanHang.Properties.Resources.___Copy;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(35, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 74;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FQuanLyHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 583);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThemHinh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtHinh);
@@ -325,7 +349,7 @@ namespace QuanLyBanHang
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTim);
-            this.Controls.Add(this.txtDiachi);
+            this.Controls.Add(this.txtGhichu);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtTenhang);
             this.Controls.Add(this.txtMahang);
@@ -335,7 +359,9 @@ namespace QuanLyBanHang
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Name = "FQuanLyHangHoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QuanLyHangHoa";
+            this.Load += new System.EventHandler(this.FQuanLyHangHoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -351,7 +377,7 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtTim;
-        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.TextBox txtGhichu;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtTenhang;
         private System.Windows.Forms.TextBox txtMahang;
@@ -370,5 +396,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnThemHinh;
+        private System.Windows.Forms.Button button1;
     }
 }

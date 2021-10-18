@@ -36,9 +36,6 @@ namespace QuanLyBanHang
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.rdbHoatdong = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rdbKhonghoatdong = new System.Windows.Forms.RadioButton();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rdbNhanvien = new System.Windows.Forms.RadioButton();
@@ -49,8 +46,14 @@ namespace QuanLyBanHang
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtgvDSNV = new System.Windows.Forms.DataGridView();
+            this.rdbNgungHD = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rdbhoatdong = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSNV)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThem
@@ -64,6 +67,7 @@ namespace QuanLyBanHang
             this.btnThem.TabIndex = 20;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtHoten
             // 
@@ -92,6 +96,7 @@ namespace QuanLyBanHang
             this.btnTim.TabIndex = 14;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label1
             // 
@@ -123,40 +128,6 @@ namespace QuanLyBanHang
             this.label6.TabIndex = 21;
             this.label6.Text = "___________";
             // 
-            // rdbHoatdong
-            // 
-            this.rdbHoatdong.AutoSize = true;
-            this.rdbHoatdong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbHoatdong.Location = new System.Drawing.Point(169, 129);
-            this.rdbHoatdong.Name = "rdbHoatdong";
-            this.rdbHoatdong.Size = new System.Drawing.Size(123, 29);
-            this.rdbHoatdong.TabIndex = 23;
-            this.rdbHoatdong.TabStop = true;
-            this.rdbHoatdong.Text = "Hoạt động";
-            this.rdbHoatdong.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 32);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Tình trạng: ";
-            // 
-            // rdbKhonghoatdong
-            // 
-            this.rdbKhonghoatdong.AutoSize = true;
-            this.rdbKhonghoatdong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbKhonghoatdong.Location = new System.Drawing.Point(313, 129);
-            this.rdbKhonghoatdong.Name = "rdbKhonghoatdong";
-            this.rdbKhonghoatdong.Size = new System.Drawing.Size(183, 29);
-            this.rdbKhonghoatdong.TabIndex = 25;
-            this.rdbKhonghoatdong.TabStop = true;
-            this.rdbKhonghoatdong.Text = "Không hoạt động";
-            this.rdbKhonghoatdong.UseVisualStyleBackColor = true;
-            // 
             // txtDiachi
             // 
             this.txtDiachi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,7 +146,6 @@ namespace QuanLyBanHang
             this.label4.Size = new System.Drawing.Size(100, 32);
             this.label4.TabIndex = 27;
             this.label4.Text = "Địa chỉ: ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // rdbNhanvien
             // 
@@ -214,10 +184,13 @@ namespace QuanLyBanHang
             // txtTim
             // 
             this.txtTim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTim.ForeColor = System.Drawing.Color.Silver;
             this.txtTim.Location = new System.Drawing.Point(587, 187);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(268, 34);
             this.txtTim.TabIndex = 31;
+            this.txtTim.Text = "-- Nhập tên nhân viên --";
+            this.txtTim.Click += new System.EventHandler(this.txtTim_Click);
             // 
             // btnThoat
             // 
@@ -229,6 +202,7 @@ namespace QuanLyBanHang
             this.btnThoat.TabIndex = 32;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -240,6 +214,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 36;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -251,6 +226,7 @@ namespace QuanLyBanHang
             this.btnSua.TabIndex = 38;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -262,23 +238,85 @@ namespace QuanLyBanHang
             this.btnLuu.TabIndex = 40;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // dataGridView1
+            // dtgvDSNV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(975, 298);
-            this.dataGridView1.TabIndex = 42;
+            this.dtgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDSNV.Location = new System.Drawing.Point(32, 227);
+            this.dtgvDSNV.Name = "dtgvDSNV";
+            this.dtgvDSNV.RowHeadersWidth = 51;
+            this.dtgvDSNV.RowTemplate.Height = 24;
+            this.dtgvDSNV.Size = new System.Drawing.Size(975, 298);
+            this.dtgvDSNV.TabIndex = 42;
+            this.dtgvDSNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSNV_CellClick);
+            // 
+            // rdbNgungHD
+            // 
+            this.rdbNgungHD.AutoSize = true;
+            this.rdbNgungHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNgungHD.Location = new System.Drawing.Point(301, 3);
+            this.rdbNgungHD.Name = "rdbNgungHD";
+            this.rdbNgungHD.Size = new System.Drawing.Size(183, 29);
+            this.rdbNgungHD.TabIndex = 45;
+            this.rdbNgungHD.TabStop = true;
+            this.rdbNgungHD.Text = "Ngừng hoạt động";
+            this.rdbNgungHD.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 32);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Tình trạng";
+            // 
+            // rdbhoatdong
+            // 
+            this.rdbhoatdong.AutoSize = true;
+            this.rdbhoatdong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbhoatdong.Location = new System.Drawing.Point(154, 3);
+            this.rdbhoatdong.Name = "rdbhoatdong";
+            this.rdbhoatdong.Size = new System.Drawing.Size(123, 29);
+            this.rdbhoatdong.TabIndex = 43;
+            this.rdbhoatdong.TabStop = true;
+            this.rdbhoatdong.Text = "Hoạt động";
+            this.rdbhoatdong.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdbNgungHD);
+            this.panel1.Controls.Add(this.rdbhoatdong);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(12, 129);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(515, 47);
+            this.panel1.TabIndex = 46;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::QuanLyBanHang.Properties.Resources.___Copy;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(32, 187);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 47;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FQuanlyNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 583);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtgvDSNV);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -288,9 +326,6 @@ namespace QuanLyBanHang
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rdbQTV);
             this.Controls.Add(this.txtDiachi);
-            this.Controls.Add(this.rdbKhonghoatdong);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.rdbHoatdong);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtHoten);
             this.Controls.Add(this.txtEmail);
@@ -300,8 +335,12 @@ namespace QuanLyBanHang
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Name = "FQuanlyNV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản lý nhân viên";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FQuanlyNV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSNV)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,9 +355,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton rdbHoatdong;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rdbKhonghoatdong;
         private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rdbNhanvien;
@@ -329,6 +365,11 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvDSNV;
+        private System.Windows.Forms.RadioButton rdbNgungHD;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rdbhoatdong;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

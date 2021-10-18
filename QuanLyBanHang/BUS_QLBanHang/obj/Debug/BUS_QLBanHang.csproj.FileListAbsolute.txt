@@ -20,3 +20,14 @@ C:\Users\Admin\Desktop\sapxepmonhoc\hocki4\DuAnMau\bailam\QuanLyBanHang\BUS_QLBa
 C:\Users\Admin\Desktop\sapxepmonhoc\hocki4\DuAnMau\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.csproj.CopyComplete
 C:\Users\Admin\Desktop\sapxepmonhoc\hocki4\DuAnMau\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.dll
 C:\Users\Admin\Desktop\sapxepmonhoc\hocki4\DuAnMau\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.pdb
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\BUS_QLBanHang.dll
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\BUS_QLBanHang.pdb
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\DAL_QLBanHang.dll
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\DTO_QLBanHang.dll
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\DAL_QLBanHang.pdb
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\bin\Debug\DTO_QLBanHang.pdb
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.csproj.CopyComplete
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.dll
+C:\Users\Admin\Desktop\bailam\QuanLyBanHang\BUS_QLBanHang\obj\Debug\BUS_QLBanHang.pdb

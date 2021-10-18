@@ -29,7 +29,7 @@ namespace QuanLyBanHang
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvKH = new System.Windows.Forms.DataGridView();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -47,18 +47,19 @@ namespace QuanLyBanHang
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgvKH
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 220);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(975, 298);
-            this.dataGridView1.TabIndex = 63;
+            this.dtgvKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvKH.Location = new System.Drawing.Point(36, 220);
+            this.dtgvKH.Name = "dtgvKH";
+            this.dtgvKH.RowHeadersWidth = 51;
+            this.dtgvKH.RowTemplate.Height = 24;
+            this.dtgvKH.Size = new System.Drawing.Size(975, 298);
+            this.dtgvKH.TabIndex = 63;
+            this.dtgvKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnLuu
             // 
@@ -70,6 +71,7 @@ namespace QuanLyBanHang
             this.btnLuu.TabIndex = 62;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -81,6 +83,7 @@ namespace QuanLyBanHang
             this.btnSua.TabIndex = 61;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -92,6 +95,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 60;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
@@ -103,6 +107,7 @@ namespace QuanLyBanHang
             this.btnThoat.TabIndex = 59;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // txtTim
             // 
@@ -166,6 +171,7 @@ namespace QuanLyBanHang
             this.btnThem.TabIndex = 48;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtHoten
             // 
@@ -241,7 +247,7 @@ namespace QuanLyBanHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 583);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgvKH);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -260,8 +266,10 @@ namespace QuanLyBanHang
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Name = "FQuanLyKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "QuanLyKhachHang";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FQuanLyKhachHang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,7 +277,7 @@ namespace QuanLyBanHang
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvKH;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
